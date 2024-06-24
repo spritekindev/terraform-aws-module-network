@@ -3,9 +3,9 @@
 # While this backup is secure, production level services should really backup to
 #  the backup account
 resource "aws_s3_bucket" "local_storage" {
-  bucket = "${var.company}-${var.name}-local-storage"
+  bucket = "${var.project}-${var.name}-local-storage"
   tags   = {
-    Environment = "${var.company}-${var.name}"
+    Environment = "${var.project}-${var.name}"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_s3_bucket_ownership_controls" "local_storage" {
 
 resource "aws_s3_bucket_logging" "local_storage" {
   bucket = aws_s3_bucket.local_storage.id
-  target_bucket = var.s3_activity_log_bucket
+  target_bucket = var.activity_log_bucket
   target_prefix = "${aws_s3_bucket.local_storage.id}/"
 }
 

@@ -59,7 +59,7 @@ module "vpc_endpoints" {
   }
 
   tags = {
-    Company  = var.company
+    Project  = var.project
     Endpoint = "true"
   }
 }

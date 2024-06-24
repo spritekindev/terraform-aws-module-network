@@ -1,6 +1,6 @@
-variable "company" {
+variable "project" {
   type = string
-  description = "The owner of the network."
+  description = "The project the network belongs to."
 }
 
 variable "name" {
@@ -89,7 +89,7 @@ variable "ingress_public_route_table_id" {
   description = "The route table of the public network of the ingress id. Requires the aws.ingress provider to be set."
 }
 
-variable "s3_activity_log_bucket" {
+variable "activity_log_bucket" {
   type = string
   description = "The bucket name this foundation will use as activity log target. Should be in the same account and configured as log target."
 }

@@ -13,12 +13,12 @@ module "test" {
     aws.ingress = aws.test
   }
 
-  company           = "dummy"
+  project           = "dummy"
   name              = "dummy"
   azs               = ["dummy"]
   vpc_cidr_block    = "0.0.0.0/0"
   public_subnets    = ["dummya", "dummyb"]
   private_subnets   = ["dummya", "dummyb"]
-  s3_activity_log_bucket = "dummy"
+  activity_log_bucket = "dummy"
   database_subnets   = ["dummya", "dummyb"]
 }
